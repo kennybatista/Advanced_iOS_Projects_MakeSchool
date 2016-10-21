@@ -1,0 +1,1 @@
+[This blog post is pretty good at explaining weak references](http://krakendev.io/blog/weak-and-unowned-references-in-swift)

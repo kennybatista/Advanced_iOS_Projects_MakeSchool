@@ -53,7 +53,10 @@ Weekday2.monday.rawValue
  4. Write a function that returns a `String` and indicates at which position this month is inside a year, e.g.: `March is the 3rd month of the year`.
  */
 
+// Classes and types start with Capital letters
 // Enums def - Enums basically are types.
+
+// enums are sort of like one variable with many different values that we could chose from when we need them
 enum CardinalDirection: String {
     case north = "⬆️"
     case east = "➡️"
@@ -62,8 +65,21 @@ enum CardinalDirection: String {
 }
 
 // Anatomy of a function : func help(direction: ATypeMustGoHere)
-
+// The ship needs to go North, East. So this function must only return "it's on it's way home" if the directions that we're passing in are North & East
 func help(direction: CardinalDirection) -> String {
+    var wayHome: String
+    // the switch takes in a type of Cardinal Direction. We use switches as "if & else". If we use more than 3 if else, then we should just use a switch. We use switches because the syntax is a lot more straight forward
+    switch direction {
+        // AP: When calling the cases, we don't need to state the type to call the value. We can just use the dot notation to call the values. Like this : .north
+    case .east: wayHome = "This direction \(➡️) does not help the ship to get home."
+    case .north: WayHome = "This direction \(⬆️) does not help the ship to get home."
+    case.south: wayHome = "This direction \(⬇️) does not help the ship to get home."
+    case.west: wayHome = "This direction \() does not help the ship get home"
+        
+        
+        
+    }
+    
     
 }
 

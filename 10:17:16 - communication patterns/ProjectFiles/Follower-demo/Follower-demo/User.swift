@@ -9,13 +9,12 @@
 import Foundation
 
 class User {
-    
-    
+
+    let name: String
+    var isFollowing: Bool
     init(name: String, isFollowing: Bool) {
         self.name = name
         self.isFollowing = isFollowing
     }
-    
-    let name: String
-    var isFollowing: Bool
+
 }

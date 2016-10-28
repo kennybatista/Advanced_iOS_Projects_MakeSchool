@@ -44,8 +44,8 @@
 		555D60A61DB3F38C00380BA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55EB32FE1DB2CE030010A4BB /* FollowButton.swift */,
 				55EB32F81DB2CD680010A4BB /* FollowerCell.swift */,
+				55EB32FE1DB2CE030010A4BB /* FollowButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -86,9 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				55EB32E61DB2CC350010A4BB /* AppDelegate.swift */,
+				555D60A61DB3F38C00380BA8 /* View */,
 				555D60A81DB3F3A200380BA8 /* View Controllers */,
 				555D60A71DB3F39B00380BA8 /* Model */,
-				555D60A61DB3F38C00380BA8 /* View */,
 				55EB32EA1DB2CC350010A4BB /* Main.storyboard */,
 				55EB32ED1DB2CC350010A4BB /* Assets.xcassets */,
 				55EB32EF1DB2CC350010A4BB /* LaunchScreen.storyboard */,

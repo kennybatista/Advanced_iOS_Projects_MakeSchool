@@ -8,10 +8,17 @@
 
 import UIKit
 
+//Step one, create the protocol, make sure that the name ends in "delegate"
+protocol FollowerTableViewDelegate {
+    // here we add the method inside of the protocol
+    func sendUser(user: User)
+}
+
 class FollowerCell: UITableViewCell {
     
     // this is the receiver
-    var receiverTableView: FollowerTableViewController! = nil
+//    var receiverTableView: FollowerTableViewController! = nil
+    var delegate: FollowerTableViewDelegate?
     
     // these are the properties
     let isFollowingString = "You are following this user"
@@ -30,8 +37,12 @@ class FollowerCell: UITableViewCell {
     
     @IBAction func followButtonPressed(_ sender: AnyObject) {
         print(#function)
-        receiverTableView.acceptUsers(user: user)
+//        receiverTableView.acceptUsers(user: user)
         setUIForCurrentFollowingState()
+        
+        delegate?.sendUser(user: user)
+        
+        
     }
     
     func setUIForCurrentFollowingState() {

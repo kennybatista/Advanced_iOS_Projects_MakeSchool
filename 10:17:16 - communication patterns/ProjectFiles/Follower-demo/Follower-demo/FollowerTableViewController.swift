@@ -8,8 +8,10 @@
 
 import UIKit
 
-class FollowerTableViewController: UITableViewController {
+// MARK: 1 - This is the first step, we implement the delegate protocol in our class: FollowerTableViewDelegate
+class FollowerTableViewController: UITableViewController, FollowerTableViewDelegate {
     
+    // Our Data
     var users: [User] =  [
         User(name: "John", isFollowing: false),
         User(name: "Carl", isFollowing: false),
@@ -36,12 +38,18 @@ class FollowerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FollowerCell") as! FollowerCell
         cell.user = users[indexPath.row]
-        cell.receiverTableView = self
+//        cell.receiverTableView = self
+        
+        // MARK: 3 - here we assign the object of our class to being the delegate of the one that needs the delegate object. "Hey Cell, I will be your delegate ( receiver ) 
+        cell.delegate = self
+        
+        
         return cell
     }
     
     
-    func acceptUsers(user: User){
+    // MARK: 2 - Here we make our class conform to the delegate protocol by implementing the required functions
+    func sendUser(user: User){
         // we print so that we could confirm that we're receiving the user
         print(user)
         // here we loop through the users array of objects in our class, and we specify that if the object that we press is the one in that index we update it

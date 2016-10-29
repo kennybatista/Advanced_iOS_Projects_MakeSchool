@@ -71,14 +71,16 @@ func help(direction: CardinalDirection) -> String {
     // the switch takes in a type of Cardinal Direction. We use switches as "if & else". If we use more than 3 if else, then we should just use a switch. We use switches because the syntax is a lot more straight forward
     switch direction {
         // AP: When calling the cases, we don't need to state the type to call the value. We can just use the dot notation to call the values. Like this : .north
-    case .east: wayHome = "This direction \(➡️) does not help the ship to get home."
+    case .east: wayHome = "This direction \() does not help the ship to get home."
     case .north: WayHome = "This direction \(⬆️) does not help the ship to get home."
     case.south: wayHome = "This direction \(⬇️) does not help the ship to get home."
-    case.west: wayHome = "This direction \() does not help the ship get home"
+    case.west: wayHome = "This direction \(⬅️) does not help the ship get home."
         
-        
+    default: wayHome = "None"
         
     }
+    
+    return wayHome
     
     
 }
